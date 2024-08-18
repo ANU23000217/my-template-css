@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Catalog</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .background {
+            display: inline-block;
+            padding: 1rem;
+            background-color: beige;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .p1 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-family: fantasy;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            
+            
+        }
+
+        .header-left {
+            flex: 1;
+            text-align: left;
+        }
+
+        .search-bar {
+            width: 80%;
+            display: inline-block;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .profile {
+            flex: 1;
+            text-align: right;
+        }
+
+        .profile img {
+            width: 50px; 
+            height: auto;
+            border-radius: 50%; 
+        }
+
+        .flex-container {
+            display: block; 
+            padding: 1rem;
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+
+        .box {
+            display: inline-block;
+            width: 30%; 
+            background-color: #c06076;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin: 0.5rem; 
+            vertical-align: top; 
+        }
+
+        .fluid {
+          
+            display: inline-block;
+            width: 30%; 
+            background-color: #9d767d;
+            color: #f8f3f3;
+            text-align: center;
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin: 0.5rem; /
+           
+             
+            
+        }
+
+        .box select {
+            width: 100%; 
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa; 
+            color: #333; 
+            font-size: 1rem;
+            margin-top: 0.5rem; 
+        }
+
+        .box select option:first-child {
+            color: #999; 
+        }
+
+        .novel-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            padding: 1rem;
+            max-width: 1200px; 
+            margin: 0 auto; /
+        }
+
+        .novel {
+            background-color: #fff;
+           
+            border-radius: 8px;
+            
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+    
+        }
+
+        .novel img {
+            width: 100%;
+            height: 450px; 
+            object-fit: fill; 
+        }
+
+        .novel-content {
+            padding: 1rem;
+            text-align: left;
+            flex: 1; 
+        }
+
+        .novel-title {
+            font-size: 1.25rem;
+            margin: 0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .novel-description {
+            font-size: 0.875rem; 
+            color: #555555;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            max-height: 60px; 
+            overflow: hidden; 
+        }
+
+        .read-more-btn {
+            background-color: #ff0062;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            text-align: center;
+            
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+           
+          
+            width: 100%;
+        }
+
+        .contact-us {
+            background-color: #e2dbdb;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 8px;
+           
+        }
+
+        .contact-us h2 {
+            margin-top: 0;
+        }
+
+        .contact-us form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-us input, .contact-us select, .contact-us textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-us button {
+            background-color: #ff0062;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><i>Explore Your Taste</i></h2>
+        </div>
+        <div class="search-bar">
+            <input type="search" placeholder="Search...">
+        </div>
+        <div class="profile">
+            <img src="./user-profile-icon-free-vector.jpg" alt="Profile">
+            <h3>Profile</h13>
+        </div>
+    </header>
+
+    <div class="flex-container">
+        <div class="fluid"><h3>Completed</h3></div>
+        <div class="fluid"><h3>Writer's Events</h3></div>
+        <div class="fluid"><h3>History</h3></div>
+        
+        <div class="box"><h3>Create Your Own Story</h3></div>
+        <div class="box">
+            <h3></h3>
+            <select>
+                <option disabled selected>Genre</option>
+                <option value="1">Romance</option>
+                <option value="2">Mystery</option>
+                <option value="3">Science Fiction</option>
+              
+            </select>
+        </div>
+
+        <div class="box"><h3>Booklist</h3></div>
+    </div>
+
+    <div class="novel-container">
+        
+        <div class="novel">
+            <img src="./silent-patient.jpg" alt="Novel 1 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 1</h2>
+                <p class="novel-description">The novel centers on two characters, psychotherapist Theo Faber and his patient, Alicia Berenson, in the wake of her apparent murder of her husband, Gabriel Berenson, switching back and forth between Alicia's diary entries in the weeks leading up to the murder and Theo's narration of events in the present.git remote add origin https://github.com/ANU23000217/my-explorer-css.git.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+  
+        <div class="novel">
+            <img src="./gone-girl.jpg" alt="Novel 2 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 2</h2>
+                <p class="novel-description">This is a brief description of the second novel. It provides a short overview of the plot and key themes. Click the "Read More" button to see the full description.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+      
+        <div class="novel">
+            <img src="./love-unscriped.jpg" alt="Novel 3 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 3</h2>
+                <p class="novel-description">This is a brief description of the third novel. It provides a short overview of the plot and key themes. Click the "Read More" button to see the full description.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+        <div class="novel">
+            <img src="./one-marriage.jpg" alt="Novel 4 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 4</h2>
+                <p class="novel-description">This is a brief description of the fourth novel. It provides a short overview of the plot and key themes. Click the "Read More" button to see the full description.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+      
+        <div class="novel">
+            <img src="./until-i-get-you.webp" alt="Novel 5 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 5</h2>
+                <p class="novel-description">This is a brief description of the fifth novel. It provides a short overview of the plot and key themes. Click the "Read More" button to see the full description.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+      
+        <div class="novel">
+            <img src="./days-chetan.jpg" alt="Novel 6 Cover">
+            <div class="novel-content">
+                <h2 class="novel-title">Novel Title 6</h2>
+                <p class="novel-description">A mystery and romance story like none other. An unputdownable tale of suspense, human relationships, love, friendship, the crazy world we live in and, above all, a mother's determination to never give up. Click the "Read More" button to see the full description.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="email" placeholder="E-mail" required>
+            <select name="country" required>
+                <option value="" disabled selected>Select Your Country</option>
+                <option value="value1">India</option>
+                <option value="value2">France</option>
+                <option value="value3">Canada</option>
+            
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Anu Radha. All rights reserved.</p>
+    </footer>
+</body>
+</html>
